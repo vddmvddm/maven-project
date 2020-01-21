@@ -5,10 +5,12 @@ pipeline {
     tools {
         maven 'localMaven'
     }
-    
-    stages{
-        steps('Build'){
+
+stages{
+        stage('Build'){
+            steps {
             sh 'mvn clean package'
+            }
         }
     }
 }
